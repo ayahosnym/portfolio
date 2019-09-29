@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+/*  
+// break point    
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+ 
+// main color 
+#3C3C3C  gray 
+#DF7879 pink 
+
+ // font-family: 'Open Sans', sans-serif; 
+*/
+/* Global style  */
+:root{
+  --bg-color: linear-gradient( to right, #4c4eafef,#7868a6f5,#7869acf6,#c297a2f5 ) ;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Roboto Mono', monospace;
+  overflow-X: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+ /* the main color  */
+
+.main-text-color {
+  color:#6d56c1;
+}
+.main-bg-color {
+background-color:#6d56c1;
+}
+.text-start{
+    text-align: start;
+}
+/* -------------START (navbar)---------------- */
+header {
+  position: relative;
+  z-index: 100;
+}
+
+nav{
+  padding-left:6rem !important; 
+  padding-top:3rem !important; 
+}
+@media screen and (max-width:992px){
+  nav{
+    padding-left:2rem !important; 
+    padding-top:1rem !important; 
+  }
+}
+.navbar-light .navbar-nav .nav-link ,
+.navbar-light .navbar-nav  .active>.nav-link 
+{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover ,
+.navbar-light .navbar-nav  .active>.nav-link:hover
+{
+  color:#ddd;
+  opacity: .9;
+  text-decoration: underline;
+}
+nav ul li a {
+  padding-right: 3.5rem !important;
+  font-weight: 700;
+}
+
+div.navbar-nav{
+  margin-left:-15px;
+  font-size: 1.4em; 
+}
+
+div.navbar-nav a {
+  color: white !important;
+}
+.navbar-light .navbar-nav .nav-link.active {
+color: black;
+}
+
+/* js class */
+.scroll-color{
+  background-color: #6d56c1; 
+}
+.scroll-color-detail{ /* js class */
+  background-color:#1d0f4dc2;
+  text-align: center;
+  padding: 1rem 0 ;
+}
+
+.btnStyleClick{
+border: none !important;
+color: white;
+}
+/* ---------END (navbar)--------- */
+
+/* -----START main section personal-info -------- */
+section.personal-info {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  min-height: 6vh;
+  background-image: url('../images/img_avatar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+section.personal-info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+height:100%;
+  background-image: var(--bg-color);
+  margin:0;
+ }
+
+div.my-img-info {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+div#my-img {
+  flex-basis: 30%;
+  margin-top: 10rem;
+  background-image: url('../images/img_avatar.png');
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin-bottom: -5rem;
+}
+
+div#my-info {
+  flex-basis: 67%;
+  margin-top: 9.1rem;
+}
+
+div#my-info>div:nth-child(2) p span:nth-child(1) {
+  text-transform: uppercase;
+  opacity: .8;
+  color: #ddd;
+}
+
+@media screen and (max-width:992px) {
+  div#my-img {
+      display: none;
+  }
+
+  div#my-info {
+    flex-basis: 100%;
+    text-align:start;
+  }
+}
+section.personal-info div.social  a {
+  margin-right: .6rem;
+}
+section.personal-info div.social  a  i{
+ font-size: 24px;
+ color: #c5c3c3;
+}
+section.personal-info div.social  a  i:hover{
+ color: #ffffff;
+ transition: all .5s;
+}
+
+/* -----START main section personal-info -------- */
+
+/* -----START  Hello section ---- */
+
+section#hello  {
+  border-bottom: 2px solid #d6d6d6;
+  margin-top: 5.5rem;
+}
+section#hello > div{
+  margin-bottom:4rem
+}
+section#hello  p {
+  line-height: 2;
+  opacity: .9;  
+}
+section#hello  a{
+border-radius: 20px;
+}
+section#hello  a i{
+font-size: 1.3em;
+margin-right: 5px;
+}
+
+/* -----END  Hello section ---- */
+/* -----START Resume section  ---- */
+
+section#resume > div:first-child p:first-child {
+ line-height: 20px;
+ font-weight: 400;
+}
+section#resume > div:first-child p span{
+  font-style: italic; 
+  font-weight: bold;
+} 
+
+section#resume h4{ /* education and employment words*/
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+ul.circle , ul.circle li , ul.circle-line , ul.circle-line li{
+  position: absolute;
+}
+
+ul.circle{
+  list-style-type:circle; 
+  font-size:30px;
+}
+ul.circle li{
+ top:-20px; 
+ left:-6px;
+}
+.circle-line{
+   left:-20px;
+   top:2px;
+   list-style-type:none;
+}
+.circle-line li{
+  border:1px solid #6d56c1;
+   top:6px;
+  left: -9px; 
+  height: 125px;
+}
+
+ul.continue-line li{ /* div.education:nth-child(3) .circle-line li*/
+  height: 149px;
+}
+div.education >div> div p:first-child{
+  color: #6d56c1;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+div.progress{
+  height: 6px;
+}
+
+.progress-bar {
+  width: 500px;
+  height: 8px;
+  border-radius: 5px;
+  margin: 5px;
+  background: #dad8d8;
+}
+
+.progress-bar span {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: #4a4ac8;
+}
+
+div.skills > div:last-child {
+  margin-bottom: 7rem;
+}
+div.skills span {
+  font-size: .85em;
+}
+/* -----END  Resume section ---- */
+
+/* ----- START portfolio section ( my project)---- */
+
+section#portfolio ul li a {
+  padding-right: 50px;
+  color: #999;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+section#portfolio ul li a:hover {
+  color:#6d56c1;
+}
+section#portfolio .card-body .card-title{
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Roboto Mono,monospace;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+section#portfolio .card-body .card-text{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 45px;
+  color: #555;
+}
+section#portfolio .card-body ul li {
+  box-shadow: 1px 2px 3px rgba(0,0, 0, .1);
+  margin-right: 15px;
+  padding: 2px 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #2e2e2e;
+}
+ p.card-link-site a{ 
+color: #6d56c1;
+font-size: 16px;
+float: right;
+margin-top: 1rem
+}
+
+section#portfolio .card-body p.card-stack {
+font-size: 12px;
+line-height: 20px;
+text-transform: uppercase;
+font-weight: 700;
+
+}
+
+section#portfolio .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ----- END portfolio section ( my project)---- */
+
+ /* ------- START testimonials section ------- */
+ section#testimonials{
+   height:60vh;
+   position: relative;
+ 
+ }
+ 
+ div.quote{
+   position: absolute;
+   width: 95px;
+   height: 95px;
+   border-radius: 50%;
+   top: -50px;
+   left: 42%;
+   z-index: 2;
+   background: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  
+  div.img-carousel{
+    background-image: var(--bg-color);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 25rem;
+  }
+  
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  @media screen and(max-width:768px){
+    section#testimonials .carousel-caption .text-start p {
+      font-size: 12px !important;
+    } 
+  }
+  
+  @media screen and (max-width:576px){
+    div.quote{
+    position: absolute;
+    left: 38%;
+  } 
+ }
+
+ /* ------- END testimonials section ------- */
+
+/* ----- START blog section ---- */
+
+section#blog .card:hover {
+  box-shadow: 4px 4px 10px #d3d2d2; 
+}
+section#blog .card .card-body div.card-text{
+font-size: 14px;
+color: #999;
+line-height: 20px;
+}
+
+section#blog .card .card-body h3{
+font-size: 14px;
+color: #555;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+section#blog .card .card-body div.card-text p:first-child{
+font-size: 12px;
+text-transform: uppercase;
+
+}
+  @media  screen  and (min-width: 768px) and (max-width: 992px) {
+  section#blog .card .card-body div.card-text p:last-child{
+  font-size: 14px;
+  }
+}
+
+/* ----- END  blog  section ---- */
+/* <!-- ----- START Contact section ---- --> */
+
+section#contact{
+  color: white;
+  background-image: url('../images/img_bg_main.jpg');
+  background-size: cover;
+}
+section#contact > section{
+  background-image: var(--bg-color)
+}
+section#contact h1 {
+  padding-top: 5rem;
+  font-size: 42px;
+}
+section#contact li {
+  margin-bottom: 1.5rem;
+}
+section#contact  a{
+  color: white;
+  transition: all .5s;
+  text-decoration: underline;
+}
+section#contact dl  a{
+  text-decoration:none;
+}
+section#contact dl  a:hover{
+  text-decoration:underline;
+}
+section#contact ul li  a:hover{
+  color: #6d56c1;
+  padding: 3px 5px;
+  background-color: white;
+  
+}
+.form-control{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white !important;
+}
+ .form-control:focus {
+  background-color: transparent;
+  box-shadow: inset 2px 2px 5px;
+}
+section#contact ::placeholder {
+  color: #ffffff !important;
+}
+section#contact button{
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 3px 20px rgba(0,0, 0, .1)
+  
+  }
+  section#contact button:hover{
+  background-color: #826ec8;
+  }
+  section#contact h2{
+  margin: 4rem 0 2rem;
+  }
+
+/* <!-- ----- END Contact section ---- --> */
+
+/* -----START setting section---------- */
+
+section.setting{
+  position: fixed;
+  right: 0%;
+  bottom: 12%;
+  display: flex;
+}
+section.setting > div i{
+  color: white;
+  background: #1f1f1f;
+  padding: 10px;
+  font-size: 30px;
+}
+.triangle-color{
+  width: 100px;
+  height: 49px;
+  background: white;
+  padding: 10px;
+  display: none;
+  box-shadow: 0px 2px 7px #333; 
+}
+
+.triangle-color span{
+  width: 35px;
+  height: 35px;
+}
+.triangle-color span:first-child{
+  background: #6d56c1;
+}
+.triangle-color span:last-child{
+  background: #1e1e1f;
+}
+
+/* style for blog.html page  */
+/* header */
+header.blog {
+  height: 45vh;
+  background-image: url('../images/img_bg_main.jpg');
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+header.blog>section {
+  background-image: var(--bg-color);
+  height: 45vh;
+  z-index: 0;
+}
+/* END header */
+
+/* start other-posts */
+#other-posts {
+  margin-top: 12rem;
+}
+
+.other-posts-questions {
+  margin: 2rem 0;
+}
+.other-posts-questions h4 {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+  margin-bottom: 10px
+}
+
+.other-posts-questions p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
+  margin-bottom: 0;
+}
+
+.article {
+  background: white;
+  width: 85%;
+  margin: -6rem auto;
+  padding: 50px;
+  box-shadow: 0 1px 21px rgba(0,0,0,.14);
+  position: relative;
+  z-index: 20;
+}
+
+.article h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.article p {
+  margin: 1.5rem 0;
+  color: #555;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.article-img {
+  width: 100%;
+  background-image: url('../images/img_article_photo.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+}
+
+.article span,
+.article a {
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+.article i:hover {
+  color: #6d56c1;
+  transition: .5s ease-in;
+}
